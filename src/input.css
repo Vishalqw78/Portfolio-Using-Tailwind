@@ -2,16 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.card {
-    @apply bg-white rounded overflow-hidden shadow-md relative;
+.active_a {
+    @apply text-white border-b-2 border-pink-600;
 }
 
-.batch {
-    @apply bg-slate-200 text-slate-500 text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2;
+.active_i {
+    @apply text-pink-500;
 }
 
-.btn {
-    @apply rounded-full py-2 px-3 text-xs font-bold cursor-pointer tracking-wider;
+.inactive_a {
+    @apply text-gray-800 border-b-2 border-slate-400;
+}
+
+.inactive_a:hover {
+    @apply text-gray-800 border-b-2 border-pink-600;
+}
+
+.inactive_i {
+    @apply text-slate-400;
 }
 
 ::-webkit-scrollbar {

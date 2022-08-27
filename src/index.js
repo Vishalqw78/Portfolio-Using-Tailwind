@@ -2,6 +2,43 @@
 tippy('.link', {
     placement: 'bottom'
 })
+//hoghlifh
+
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("nav ul li a");
+const navLiI = document.querySelectorAll("nav ul li a i");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop - sectionHeight / 2) {
+            current = section.getAttribute("id");
+        }
+    })
+    navLiI.forEach(i => {
+        i.classList.remove("active_i");
+        i.classList.add("inactive_i");
+
+        if (i.classList.contains(current)) {
+            i.classList.add('active_i');
+            i.classList.remove('inactive_i');
+
+        }
+    });
+
+    navLi.forEach(a => {
+        a.classList.add("inactive_a");
+        a.classList.remove("active_a");
+        if (a.classList.contains(current)) {
+            a.classList.add('active_a');
+            a.classList.remove('inactive_a');
+
+        }
+    })
+});
+
 
 //Toggle Profile Theme
 const toggle = document.querySelector('.js-change-theme');
