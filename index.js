@@ -46,6 +46,10 @@ const body = document.querySelector('body');
 const profile = document.getElementById('profile');
 const skill = document.getElementById('skill');
 const project = document.getElementById('project');
+const education = document.getElementById('Education');
+const edu = document.getElementById('edu-board');
+
+
 
 const li = document.getElementById('toggle-icon')
 
@@ -75,6 +79,13 @@ toggle.addEventListener('click', () => {
         skill.classList.remove('text-black');
         skill.classList.add('text-white');
 
+        education.classList.remove('bg-gray-100');
+        education.classList.add('bg-gray-900');
+        education.classList.remove('text-black');
+        education.classList.add('text-white');
+        edu.classList.remove("bg-white");
+        edu.classList.add('bg-gray-700');
+
         li.classList.remove('fa-moon');
         li.classList.add('fa-sun');
     } else {
@@ -92,6 +103,14 @@ toggle.addEventListener('click', () => {
         skill.classList.add('bg-gray-100');
         skill.classList.remove('text-white');
         skill.classList.add('text-black');
+
+        education.classList.remove('bg-gray-900');
+        education.classList.add('bg-gray-100');
+        education.classList.remove('text-white');
+        education.classList.add('text-black');
+
+        edu.classList.add("bg-white");
+        edu.classList.remove('bg-gray-700');
 
         project.classList.remove('bg-gray-900');
         project.classList.add('bg-gray-100');
