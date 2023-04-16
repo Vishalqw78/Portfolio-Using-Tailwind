@@ -69,7 +69,7 @@ toggle.addEventListener('click', () => {
         body.classList.remove('bg-gray-100');
         body.classList.add('bg-gray-900');
 
-        profile.classList.remove('bg-gray-100');
+        profile.classList.remove('bg-white');
         profile.classList.add('bg-gray-900');
         profile.classList.remove('text-black');
         profile.classList.add('text-white');
